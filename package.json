@@ -1,0 +1,19 @@
+{
+  "name": "evangadiforum_backend",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hermi-git/EvangadiForum_Backend.git"
+  },
+  "author": "Hermela",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hermi-git/EvangadiForum_Backend/issues"
+  },
+  "homepage": "https://github.com/Hermi-git/EvangadiForum_Backend#readme",
+  "description": ""
+}
