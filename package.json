@@ -15,5 +15,13 @@
     "url": "https://github.com/Hermi-git/EvangadiForum_Backend/issues"
   },
   "homepage": "https://github.com/Hermi-git/EvangadiForum_Backend#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "http-status-codes": "^2.3.0",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.12.0"
+  }
 }
