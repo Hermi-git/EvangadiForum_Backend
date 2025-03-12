@@ -36,7 +36,7 @@ const login = async (req, res)=>{
     try {
         const [user] = await dbConnection.query("select username, userid, password from users where email = ? ", [email])
         if(user.length == 0 ){
-            res.status(StatusCodes.BAD_REQUEST).json({
+            return res.status(StatusCodes.BAD_REQUEST).json({
                 msg: "invalid credential"
             })
         }
@@ -44,7 +44,7 @@ const login = async (req, res)=>{
         const isMatch = await bcrypt.compare(password, user[0].password)
 
         if(!isMatch){
-            res.status(StatusCodes.BAD_REQUEST).json({
+           return res.status(StatusCodes.BAD_REQUEST).json({
                 msg: "invalid credential"
         })}
 
@@ -52,7 +52,7 @@ const login = async (req, res)=>{
         const userid = user[0].userid
         const token = jwt.sign({username, userid}, process.env.JWT_SECRET, {expiresIn:"1d"})
     
-        res.status(StatusCodes.OK).json({msg : "User logged in successfully", token})
+        res.status(StatusCodes.OK).json({msg : "User logged in successfully", token, username})
 
     } catch (error) {
         console.log(error.message)

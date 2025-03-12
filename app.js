@@ -5,6 +5,10 @@ const port = 5500;
 const authMiddleware = require("./middleware/authmiddleware")
 //db connection
 const dbConnection = require("./db/dbconfig");
+const cors = require("cors")
+app.use(cors())
+
+
 async function start() {
     try {
     const result = await dbConnection.execute("select 'test' ")
